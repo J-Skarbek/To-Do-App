@@ -1,15 +1,15 @@
-// export function projectTemplate() {
-
-// }
+const ProjectPrototype = (projectName, projectOwner) => {
+  const logDeets = () => console.log({projectName, projectOwner});
+  return {
+    logDeets
+  };
+}
 
 export const Project = (projectName, projectOwner) => {
-  const logDeets = () => console.log({projectName, projectOwner});
-
+  const {logDeets} = ProjectPrototype(projectName, projectOwner);
   return {
     projectName, 
     projectOwner,
     logDeets
   }
 }
-
-// const newProject = Project('New Project', 'John Skarbek')
