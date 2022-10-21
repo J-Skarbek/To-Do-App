@@ -5,6 +5,7 @@ import { createNav } from './nav-bar.js';
 import { createSideBar } from './sidebar.js';
 import { Project } from './project-logic.js';
 import { ToDo } from './to-dos.js';
+import { popUp } from './createProject.js';
 
 const newProject = Project('New Project', 'John Skarbek')
 newProject.logDeets();
@@ -16,4 +17,7 @@ console.log(formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true
 
 createNav();
 createSideBar();
+
+const testBtn = document.querySelector('.test-button')
+testBtn.addEventListener('click', popUp)
 
