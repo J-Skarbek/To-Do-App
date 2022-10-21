@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './style.css';
+import createNav from './nav-bar.js'
 
 function component() {
   const element = document.createElement('div');
@@ -11,3 +12,5 @@ function component() {
 }
   
 document.body.appendChild(component());
+
+createNav();
