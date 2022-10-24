@@ -21,7 +21,6 @@ const ToDoProto = (name, date, priority, notes) => {
     markComplete,
     logToDoDetails
   }
-
 }
 
 export const ToDo = (name, date, priority, notes) => {
@@ -34,5 +33,4 @@ export const ToDo = (name, date, priority, notes) => {
     notes,
     logToDoDetails
   };
-
 }

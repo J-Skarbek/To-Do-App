@@ -9,7 +9,4 @@ export function popUp() {
     allProjects.displayProjects();
     return newProject;
   };
-// console.log(newProject, typeof newProject)
-// allProjects.projects.push(newProject);
-// allProjects.displayProjects();
 }
