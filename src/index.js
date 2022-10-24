@@ -9,9 +9,12 @@ import { popUp } from './createProject.js';
 
 const newProject = Project('New Project', 'John Skarbek')
 newProject.logDeets();
+newProject.pushProject();
+newProject.displayProjects();
 
 const task1 = ToDo('Make Dinner', '11/29/1986', 'High', 'Make it with low cholesterol');
 task1.logToDoDetails();
+
 
 console.log(formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true }))
 
