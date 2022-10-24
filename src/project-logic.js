@@ -1,4 +1,4 @@
-const allProjects = (function() {
+export const allProjects = (function() {
   const projects = [];
   const displayProjects = () => {
     console.table(projects);
@@ -10,13 +10,13 @@ const allProjects = (function() {
 })();
 
 const ProjectPrototype = (projectName, projectOwner) => {
-  const pushProject = allProjects.projects.push(Project);
-  const displayProjects = allProjects.displayProjects()
+  // const pushProject = allProjects.projects.push(Project);
+  // const displayProjects = allProjects.displayProjects()
   const logDeets = () => console.log({projectName, projectOwner});
   return {
     logDeets,
-    pushProject,
-    displayProjects,
+    // pushProject,
+    // displayProjects,
   };
 }
 
@@ -26,7 +26,7 @@ export const Project = (projectName, projectOwner) => {
     projectName, 
     projectOwner,
     logDeets,
-    pushProject,
-    displayProjects,
+    // pushProject,
+    // displayProjects,
   }
 }
