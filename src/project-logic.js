@@ -9,7 +9,7 @@ export const allProjects = (function() {
   }
 })();
 
-function ProjectPrototype(projectName, projectOwner) {
+export function ProjectPrototype(projectName, projectOwner) {
   const logDeets = () => console.log({projectName, projectOwner});
   return {
     logDeets,

@@ -2,9 +2,9 @@ import { Project, allProjects } from './project-logic';
 
 export function popUp() {
   let projectName = prompt('Create a new Project');
-  if (projectName != null || projectName != undefined) {
+  if (projectName != null || projectName != undefined || projectName != '') {
     const newProject = Project(projectName);
-    console.log(newProject, typeof newProject)
+    newProject.logDeets();
     allProjects.projects.push(newProject);
     allProjects.displayProjects();
     return newProject;
