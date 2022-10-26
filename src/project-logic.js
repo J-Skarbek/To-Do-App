@@ -21,6 +21,7 @@ export function Project(projectName, projectOwner) {
   return {
     projectName, 
     projectOwner,
-    logDeets,
+    logDeets
+
   }
 }
