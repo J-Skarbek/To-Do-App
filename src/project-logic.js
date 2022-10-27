@@ -18,9 +18,11 @@ export function ProjectPrototype(projectName, projectOwner) {
 
 export function Project(projectName, projectOwner) {
   const { logDeets } = ProjectPrototype(projectName, projectOwner);
+  const listOfTasks = [];
   return {
     projectName, 
     projectOwner,
+    listOfTasks,
     logDeets
 
   }

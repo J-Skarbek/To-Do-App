@@ -1,6 +1,6 @@
-const ToDoProto = (name, date, priority, notes) => {
+const ToDoProto = (name, date, projectName, owner, priority, notes) => {
   const logToDoDetails = () => {
-    console.log({name, date, priority, notes})
+    console.log({name, date, projectName, owner, priority, notes})
   };
 
   const updateStatus = () => {
@@ -23,12 +23,14 @@ const ToDoProto = (name, date, priority, notes) => {
   }
 }
 
-export const ToDo = (name, date, priority, notes) => {
-  const {logToDoDetails} = ToDoProto(name, date, priority, notes);
+export const ToDo = (name, date, projectName, owner, priority, notes) => {
+  const {logToDoDetails} = ToDoProto(name, date, projectName, owner, priority, notes);
 
   return {
     name,
     date,
+    projectName, 
+    owner,
     priority,
     notes,
     logToDoDetails

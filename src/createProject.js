@@ -1,12 +1,13 @@
 import { Project, allProjects } from './project-logic';
-import { listProjects } from './displayProjects.js';
+// import { listProjects } from './displayProjects.js';
 
-listProjects();
+// listProjects();
 
 export function popUp() {
   let projectName = prompt('Create a new Project');
   if (projectName != null || projectName != undefined || projectName != '') {
     const newProject = Project(projectName);
+    newProject.projectOwner = 'Jameson\'s Lucky Carr';
     newProject.logDeets();
     allProjects.projects.push(newProject);
     allProjects.displayProjects();
@@ -20,7 +21,7 @@ export function popUp() {
     mainContent.appendChild(projectList);
 
     let domPopulate = document.createElement('li');
-    domPopulate.innerText = newProject.projectName;
+    domPopulate.innerText = `${newProject.projectName} is owned by ${newProject.projectOwner}`;
     projectList.appendChild(domPopulate);
     return newProject;
   };
