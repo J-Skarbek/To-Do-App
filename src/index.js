@@ -25,3 +25,16 @@ listProjects();
 const testBtn = document.querySelector('.test-button');
 testBtn.addEventListener('click', popUp);
 
+const testInputSubmission = document.querySelector('.input-submission');
+testInputSubmission.addEventListener('click', testingToDos);
+
+
+function testingToDos() {
+    const getTaskName = document.getElementById('task_name').value;
+    const getTaskDueDate = document.getElementById('task_due_date').value;
+    const getTaskOwnerName = document.getElementById('task_owner').value;
+    const getTaskNotes = document.getElementById('notes').value;
+    let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes)
+    newTask.logToDoDetails();
+}
+
