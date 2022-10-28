@@ -28,7 +28,7 @@ export function listProjects() {
   mainContent.appendChild(projectList);
 
   let domPopulate = document.createElement('li');
-  domPopulate.innerText = Project.projectName;
+  // domPopulate.innerText = Project.projectName;
   projectList.appendChild(domPopulate);
 
   return mainContent;

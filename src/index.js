@@ -8,6 +8,7 @@ import { listProjects } from './displayProjects.js';
 import { ToDo } from './to-dos.js';
 import { popUp } from './createProject.js';
 import { displayTaskList } from './displayTasks.js';
+import { addToStorage } from './storageHandlers.js';
 
 // const newProject = Project('New Project', 'John Skarbek');
 // newProject.logDeets();
@@ -37,6 +38,10 @@ function testingToDos() {
     const getTaskNotes = document.getElementById('notes').value;
     let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes);
     displayTaskList(newTask.name);
+    localStorage.setItem('taskObject', newTask.name);
+    localStorage.setItem('taskOwner', newTask.owner);
+    // addToStorage(newTask.name);
+    console.log(`Here's a test ${localStorage.taskObject}, owner is ${localStorage.taskOwner}.`);
     newTask.logToDoDetails();
 }
 
