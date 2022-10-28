@@ -7,6 +7,7 @@ import { listProjects } from './displayProjects.js';
 // import { Project } from './project-logic.js';
 import { ToDo } from './to-dos.js';
 import { popUp } from './createProject.js';
+import { displayTaskList } from './displayTasks.js';
 
 // const newProject = Project('New Project', 'John Skarbek');
 // newProject.logDeets();
@@ -34,7 +35,8 @@ function testingToDos() {
     const getTaskDueDate = document.getElementById('task_due_date').value;
     const getTaskOwnerName = document.getElementById('task_owner').value;
     const getTaskNotes = document.getElementById('notes').value;
-    let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes)
+    let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes);
+    displayTaskList(newTask.name);
     newTask.logToDoDetails();
 }
 
