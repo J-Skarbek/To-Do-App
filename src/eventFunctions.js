@@ -1,5 +1,5 @@
 import { ToDo } from './to-dos.js';
-import { displayTaskList, taskListDisplay, taskDisplay } from './displayTasks.js';
+import { taskDisplay } from './displayTasks.js';
 
 export function testStorageKeys() {
   let keys = Object.keys(localStorage);
@@ -14,8 +14,7 @@ export function testingToDos() {
   const getTaskOwnerName = document.getElementById('task_owner').value;
   const getTaskNotes = document.getElementById('notes').value;
   let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes);
-  taskDisplay(newTask.name);
-  taskDisplay(newTask.owner);
+  taskDisplay(newTask);
   localStorage.setItem('taskObject', newTask.name);
   localStorage.setItem('taskOwner', newTask.owner);
   console.log(`Here's a test ${localStorage.taskObject}, owner is ${localStorage.taskOwner}.`);
