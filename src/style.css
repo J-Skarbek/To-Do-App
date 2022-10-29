@@ -99,19 +99,23 @@ table {
 
 /*test css for sample project card*/
 .main-content-area {
-grid-column: 4 / span 2;
-grid-row: 3 / span 3;
+grid-column: 4 / span 8;
+grid-row: 2 / span 6;
 background-color: #f1f1f1;
 border: 3px solid #f1f1f1;
 border-radius: 25px;
 padding: 5%;
 }
 
+.task-listings {
+
+}
+
 /*basic form positioning for testing inputs and stuff*/
 
 .form-wrapper {
-    grid-column: 8 / span 4;
-    grid-row: 3 / span 6;
+    grid-column: 4 / span 4;
+    grid-row: 8 / span 4;
 }
 
 .task-input-body {

@@ -24,6 +24,5 @@ export function Project(projectName, projectOwner) {
     projectOwner,
     listOfTasks,
     logDeets
-
   }
 }

@@ -5,6 +5,7 @@ import { domListeners } from './listeners.js'
 import { createNav } from './nav-bar.js';
 import { createSideBar } from './sidebar.js';
 import { listProjects } from './displayProjects.js';
+import { taskListDisplay} from './displayTasks.js';
 import { ToDo } from './to-dos.js';
 
 // const newProject = Project('New Project', 'John Skarbek');
@@ -18,4 +19,5 @@ console.log(formatDistance(subDays(new Date(), 3), new Date(), { addSuffix: true
 createNav();
 createSideBar();
 listProjects();
+taskListDisplay();
 domListeners();

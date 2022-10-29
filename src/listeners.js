@@ -1,5 +1,5 @@
 import { popUp } from './createProject.js';
-import { testStorageKeys, testingToDos} from './eventFunctions.js'
+import { testStorageKeys, testingToDos } from './eventFunctions.js'
 
 export function domListeners() {
   const testBtn = document.querySelector('.test-button');
