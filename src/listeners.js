@@ -1,5 +1,5 @@
 import { popUp } from './createProject.js';
-import { testStorageKeys, testingToDos } from './eventFunctions.js'
+import { testStorageKeys, testingToDos, clearStorage } from './eventFunctions.js'
 
 export function domListeners() {
   const testBtn = document.querySelector('.test-button');
@@ -10,4 +10,7 @@ export function domListeners() {
 
   const testGetFromLocal = document.querySelector('.test-get-from-local');
   testGetFromLocal.addEventListener('click',testStorageKeys);
+
+  const clearLocalStorage = document.querySelector('.clear-local-storage');
+  clearLocalStorage.addEventListener('click', clearStorage)
 }

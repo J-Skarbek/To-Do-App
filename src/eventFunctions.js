@@ -23,3 +23,7 @@ export function testingToDos() {
   // console.log(`Here's a test ${localStorage.taskObject}, owner is ${localStorage.taskOwner}.`);
   newTask.logToDoDetails();
 }
+
+export function clearStorage() {
+  localStorage.clear();
+}
