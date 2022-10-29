@@ -4,6 +4,12 @@ export function addToStorage(newTask) {
   // localStorage.setItem('taskOwner', newTask.owner);
 }
 
+// export function getStoredTasks() {
+//   if (localStorage.getItem(taskObject)) {
+
+//   }
+// }
+
 // function getStorageVals() {
 //   const currentColor = localStorage.getItem('bgcolor');
 //   const currentFont = localStorage.getItem('font');

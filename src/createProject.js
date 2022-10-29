@@ -1,8 +1,4 @@
 import { Project, allProjects } from './project-logic';
-// import { listProjects } from './displayProjects.js';
-
-// listProjects();
-
 export function popUp() {
   let projectName = prompt('Create a new Project');
   if (projectName != null || projectName != undefined || projectName != '') {

@@ -1,11 +1,9 @@
-import { something } from './toDoInputForm.js';
-
 export function createSideBar() {
-    const sideBar = document.querySelector('.side-bar');
-    const itemWrapper = document.createElement('div')
+  const sideBar = document.querySelector('.side-bar');
+  const itemWrapper = document.createElement('div')
 
-    sideBar.appendChild(itemWrapper);
+  sideBar.appendChild(itemWrapper);
 
 
-    return sideBar;
+  return sideBar;
 }
