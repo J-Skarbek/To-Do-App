@@ -1,16 +1,16 @@
+import { taskDisplay } from "./displayTasks";
+
 export function addToStorage(newTask) {
-  localStorage.setItem('taskObject', newTask.name);
-  localStorage.getItem('taskObject', newTask.name);
-  // localStorage.setItem('taskOwner', newTask.owner);
+  localStorage.setItem('task', JSON.stringify(newTask));
+  console.log(`Testing local storage: ${localStorage.getItem('task')}.`)
+  console.log(localStorage.length);
 }
 
-// export function getStoredTasks() {
-//   if (localStorage.getItem(taskObject)) {
+export function displaySavedTasks() {
+  if ( localStorage.length > 0 ) {
+    localStorage.getItem('task')
+    let test123 = JSON.parse(localStorage.getItem('task')); 
+    taskDisplay(test123)
+  };
 
-//   }
-// }
-
-// function getStorageVals() {
-//   const currentColor = localStorage.getItem('bgcolor');
-//   const currentFont = localStorage.getItem('font');
-//   const currentImage = localStorage.getItem('image');
+}
