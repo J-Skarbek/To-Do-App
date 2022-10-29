@@ -5,7 +5,8 @@ import { addToStorage } from './storageHandlers.js';
 export function testStorageKeys() {
   let keys = Object.keys(localStorage);
   for(let key of keys) {
-      console.log(localStorage.getItem(key));
+      console.log(JSON.parse(localStorage.getItem('task')));
+      // console.log(localStorage.getItem(key));
   };
 }
 
