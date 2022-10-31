@@ -1,4 +1,5 @@
 import { Project, allProjects } from './project-logic';
+import { testSavingProjects } from './storageHandlers.js';
 export function popUp() {
   let projectName = prompt('Create a new Project');
   if (projectName != null || projectName != undefined || projectName != '') {
@@ -7,6 +8,7 @@ export function popUp() {
     newProject.logDeets();
     allProjects.projects.push(newProject);
     allProjects.displayProjects();
+    testSavingProjects();
 
 
     const mainContent = document.querySelector('.main-content-area');

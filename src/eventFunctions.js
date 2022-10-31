@@ -5,9 +5,13 @@ import { addToStorage } from './storageHandlers.js';
 export function testStorageKeys() {
   let keys = Object.keys(localStorage);
   for(let key of keys) {
-      console.log(JSON.parse(localStorage.getItem('task')));
-      // console.log(localStorage.getItem(key));
+  console.table(`${key}: ${localStorage.getItem(key)}`);
   };
+  // let keys = Object.keys(localStorage);
+  // for(let key of keys) {
+  //     console.log(JSON.parse(localStorage.getItem(key)));
+  //     // console.log(localStorage.getItem(key));
+  // };
 }
 
 export function testingToDos() {
@@ -15,7 +19,7 @@ export function testingToDos() {
   const getTaskDueDate = document.getElementById('task_due_date').value;
   const getTaskOwnerName = document.getElementById('task_owner').value;
   const getTaskNotes = document.getElementById('notes').value;
-  let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes);
+  let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes); 
   taskDisplay(newTask);
   addToStorage(newTask);
   // localStorage.setItem('taskObject', newTask.name);
