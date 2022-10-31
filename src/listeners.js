@@ -1,7 +1,9 @@
 import { popUp } from './createProject.js';
-import { testStorageKeys, testingToDos, clearStorage } from './eventFunctions.js'
+import { testStorageKeys, testingToDos, clearStorage, checkStorage } from './eventFunctions.js'
 
 export function domListeners() {
+  window.addEventListener('load', checkStorage);
+
   const testBtn = document.querySelector('.test-button');
   testBtn.addEventListener('click', popUp);
 

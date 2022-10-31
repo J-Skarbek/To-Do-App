@@ -1,17 +1,14 @@
 import { ToDo } from './to-dos.js';
+// import { allProjects } from './project-logic.js'
 import { taskDisplay } from './displayTasks.js';
 import { addToStorage } from './storageHandlers.js';
 
 export function testStorageKeys() {
   let keys = Object.keys(localStorage);
-  for(let key of keys) {
-  console.table(`${key}: ${localStorage.getItem(key)}`);
-  };
-  // let keys = Object.keys(localStorage);
-  // for(let key of keys) {
-  //     console.log(JSON.parse(localStorage.getItem(key)));
-  //     // console.log(localStorage.getItem(key));
-  // };
+  keys.forEach(key => {
+    console.log(JSON.parse(localStorage.getItem(key)));
+
+  });
 }
 
 export function testingToDos() {
@@ -26,6 +23,22 @@ export function testingToDos() {
   // localStorage.setItem('taskOwner', newTask.owner);
   // console.log(`Here's a test ${localStorage.taskObject}, owner is ${localStorage.taskOwner}.`);
   newTask.logToDoDetails();
+}
+
+export function checkStorage() {
+  if (!localStorage.getItem('projects')) {
+    console.log('nothing in storage.')
+  } else {
+    // let keys = Object.keys(localStorage);
+    // keys.forEach(key => {
+    //   let projectItem = JSON.parse(localStorage.getItem(key));
+    //   allProjects.projects.push(projectItem)
+    //   console.log(JSON.parse(localStorage.getItem(key)));
+    //   console.table(allProjects)
+    // });
+
+    console.log(JSON.parse(localStorage.getItem('projects')))
+  };
 }
 
 export function clearStorage() {
