@@ -7,7 +7,6 @@ export function testStorageKeys() {
   let keys = Object.keys(localStorage);
   keys.forEach(key => {
     console.log(JSON.parse(localStorage.getItem(key)));
-
   });
 }
 
@@ -19,14 +18,10 @@ export function testingToDos() {
   let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes); 
   taskDisplay(newTask);
   addToStorage(newTask);
-  // localStorage.setItem('taskObject', newTask.name);
-  // localStorage.setItem('taskOwner', newTask.owner);
-  // console.log(`Here's a test ${localStorage.taskObject}, owner is ${localStorage.taskOwner}.`);
-  newTask.logToDoDetails();
 }
 
 export function checkStorage() {
-  if (!localStorage.getItem('projects')) {
+  if (!localStorage.getItem('projects') && !localStorage.getItem('tasks')) {
     console.log('nothing in storage.')
   } else {
     // let keys = Object.keys(localStorage);
@@ -36,8 +31,8 @@ export function checkStorage() {
     //   console.log(JSON.parse(localStorage.getItem(key)));
     //   console.table(allProjects)
     // });
-
-    console.log(JSON.parse(localStorage.getItem('projects')))
+    console.log(`Tasks: ${JSON.parse(localStorage.getItem('tasks'))}`);
+    console.log(`Tasks: ${JSON.parse(localStorage.getItem('projects'))}`);
   };
 }
 
