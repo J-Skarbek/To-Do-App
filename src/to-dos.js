@@ -23,7 +23,7 @@ const ToDoProto = (name, date, projectName, owner, priority, notes) => {
   }
 }
 
-export const ToDo = (name, date, projectName, owner, priority, notes) => {
+export function ToDo(name, date, projectName, owner, priority, notes) {
   const {logToDoDetails} = ToDoProto(name, date, projectName, owner, priority, notes);
 
   return {
