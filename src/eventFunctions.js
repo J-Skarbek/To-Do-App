@@ -10,12 +10,12 @@ export function testStorageKeys() {
   });
 }
 
-export function testingToDos() {
-  const getTaskName = document.getElementById('task_name').value;
-  const getTaskDueDate = document.getElementById('task_due_date').value;
-  const getTaskOwnerName = document.getElementById('task_owner').value;
-  const getTaskNotes = document.getElementById('notes').value;
-  let newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes); 
+export function addNewTask() {
+  let getTaskName = document.getElementById('task_name').value;
+  let getTaskDueDate = document.getElementById('task_due_date').value;
+  let getTaskOwnerName = document.getElementById('task_owner').value;
+  let getTaskNotes = document.getElementById('notes').value;
+  const newTask = ToDo(getTaskName, getTaskDueDate, '', getTaskOwnerName, '', getTaskNotes); 
   taskDisplay(newTask);
   addToStorage(newTask);
 }
@@ -38,4 +38,5 @@ export function checkStorage() {
 
 export function clearStorage() {
   localStorage.clear();
+  console.log('Local Storage has been cleared.')
 }
